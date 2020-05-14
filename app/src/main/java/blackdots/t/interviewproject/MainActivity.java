@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import blackdots.t.interviewproject.Adapter.CartAdaper;
+import blackdots.t.interviewproject.Pojo.BaseClass;
+import blackdots.t.interviewproject.Pojo.BaseClass;
+import blackdots.t.interviewproject.Pojo.BillingItem;
 import blackdots.t.interviewproject.Pojo.CartItem;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView item_Recyclerview;
     CartAdaper cartAdaper;
     LinearLayoutManager linearLayoutManager;
-    List<CartItem> cartItemList = new ArrayList<>();
+    List<BaseClass> cartItemList = new ArrayList<>();
     List<String> dateList = new ArrayList<>();
 
     @Override
@@ -41,39 +44,47 @@ public class MainActivity extends AppCompatActivity {
 
     private void addDummydata() {
 
-        CartItem c1=new CartItem();
-        c1.setName("biryani");
-        c1.setOrderdate("09-apr-2020 09:30 pm");
+        BaseClass c2=new BaseClass();
+        c2.setItemName("idly");
+        c2.setDate("09-apr-2020 09:30 pm");
 
-        CartItem c2=new CartItem();
-        c2.setName("idly");
-        c2.setOrderdate("09-apr-2020 09:30 pm");
+        BaseClass c3=new BaseClass();
+        c3.setItemName("Dosa");
+        c3.setDate("09-apr-2020 09:30 pm");
 
-        CartItem c3=new CartItem();
-        c3.setName("Dosa");
-        c3.setOrderdate("09-apr-2020 09:30 pm");
+        BaseClass c4=new BaseClass();
+        c4.setItemName("Poori");
+        c4.setDate("10-apr-2020 08:30 am");
 
-        CartItem c4=new CartItem();
-        c4.setName("Poori");
-        c4.setOrderdate("10-apr-2020 08:30 am");
+        BaseClass c5=new BaseClass();
+        c5.setItemName("idly");
+        c5.setDate("10-apr-2020 08:30 am");
 
-        CartItem c5=new CartItem();
-        c5.setName("idly");
-        c5.setOrderdate("10-apr-2020 08:30 am");
+        BaseClass c6=new BaseClass();
+        c6.setItemName("biryani");
+        c6.setDate("10-apr-2020 08:30 am");
 
-        CartItem c6=new CartItem();
-        c6.setName("biryani");
-        c6.setOrderdate("10-apr-2020 08:30 am");
+        BaseClass c7=new BaseClass();
+        c7.setItemName("Dosa");
+        c7.setDate("11-apr-2020 10:30 pm");
 
-        CartItem c7=new CartItem();
-        c7.setName("Dosa");
-        c7.setOrderdate("11-apr-2020 10:30 pm");
+        BaseClass c8=new BaseClass();
+        c8.setItemName("biryani");
+        c8.setDate("11-apr-2020 10:30 pm");
 
-        CartItem c8=new CartItem();
-        c8.setName("biryani");
-        c8.setOrderdate("11-apr-2020 10:30 pm");
+        BaseClass c1=new BaseClass();
+        c1.setItemName("biryani");
+        c1.setDate("09-apr-2020 09:30 pm");
 
-        cartItemList.add(c1);
+        BillingItem b=new BillingItem();
+        b.setBillingName("Dosa");
+        b.setBillingDate("09-apr-2020 09:30 pm");
+
+        CartItem c=new CartItem();
+        c.setCartItemName("Idly Cart");
+        c.setCartItemDate("08-apr-2020 09:30 pm");
+
+
         cartItemList.add(c2);
         cartItemList.add(c3);
         cartItemList.add(c4);
@@ -81,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
         cartItemList.add(c6);
         cartItemList.add(c7);
         cartItemList.add(c8);
+        cartItemList.add(c1);
+        cartItemList.add(b);
+        cartItemList.add(c);
 
         cartAdaper.addItems(cartItemList);
 
